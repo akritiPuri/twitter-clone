@@ -1,0 +1,16 @@
+.tweet-create {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid;
+}
