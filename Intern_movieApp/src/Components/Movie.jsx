@@ -17,24 +17,31 @@ function Movie() {
   console.log(movieList);
 
   return (
-    <div>
-      {movieList.map((items) => (
-        <div key={items.id}>
-          <Link to={`/moviedetails/${items.id}`}>
-            <img
-              style={{ width: "200px", height: "250px" }}
-              src={`https://image.tmdb.org/t/p/w500${items.poster_path}`}
-            />
-            <div>
-              Title: {items.title}
+    <div className="h-full w-full bg-slate-400">
+      <h1 className="text-5xl text-rose-950 text-center text-2xl text font-bold">MOVIES</h1><br/>
+      <div className="flex flex-wrap gap-4 justify-center">
+        {movieList.map((items) => (
+          <div key={items.id}>
+            <Link to={`/moviedetails/${items.id}`}>
               <div>
-                Release date: {items.release_date}
-                <div> Popularity:{items.popularity}</div>
+                <img
+                  className="w-80 h-80 shadow-2xl rounded-xl"
+                  src={`https://image.tmdb.org/t/p/w500${items.poster_path}`}
+                />
               </div>
-            </div>
-          </Link>
-        </div>
-      ))}
+              <div className=" text font-bold" >
+                <div classname="text-rose-900">
+                Title: {items.title}
+                </div>
+                <div>
+                  Release date: {items.release_date}
+                  {/* <div className=" text font-bold">Popularity:{items.popularity}</div> */}
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
