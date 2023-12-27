@@ -17,8 +17,11 @@ function Movie() {
   console.log(movieList);
 
   return (
-    <div className="h-full w-full bg-slate-400">
-      <h1 className="text-5xl text-rose-950 text-center text-2xl text font-bold">MOVIES</h1><br/>
+    <div className="h-full w-full bg-neutral-200">
+      <h1 className="text-5xl text-rose-950 text-center text-2xl text font-bold">
+        MOVIES
+      </h1>
+      <br />
       <div className="flex flex-wrap gap-4 justify-center">
         {movieList.map((items) => (
           <div key={items.id}>
@@ -29,10 +32,8 @@ function Movie() {
                   src={`https://image.tmdb.org/t/p/w500${items.poster_path}`}
                 />
               </div>
-              <div className=" text font-bold" >
-                <div classname="text-rose-900">
-                Title: {items.title}
-                </div>
+              <div className=" text font-bold w-80">
+                <div classname="text-rose-900">Title: {items.title}</div>
                 <div>
                   Release date: {items.release_date}
                   {/* <div className=" text font-bold">Popularity:{items.popularity}</div> */}

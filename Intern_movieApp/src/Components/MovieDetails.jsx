@@ -23,7 +23,7 @@ const MovieDetails = () => {
   }, [id]);
 
   return (
-    <div className="container mx-auto mt-8 p-4 grid grid-cols-2 gap-4">
+    <div className="container mx-auto mt-8 p-4 grid grid-cols-2 gap-5 bg-amber-100">
       <div>
         <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
 
@@ -56,7 +56,7 @@ const MovieDetails = () => {
           <label className="text font-bold">Completed</label>
         </div>
 
-        <div className="text-orange-600 mb-4">{status}</div>
+        <div className="text-orange-600 mb-4"><span className="text font-bold text-amber-950">Status: </span>{status}</div>
 
         <div className="mb-4">
           <span className="text font-bold">Original Language:</span>{" "}
@@ -69,11 +69,11 @@ const MovieDetails = () => {
         </div>
       </div>
 
-      <div>
-        <img 
+      <div >
+        <img  
           src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
           alt={data.title}
-          className="w-3/6 h-auto"
+          className="w-auto h- w-80 h-80 shadow-2xl rounded-xl "
         />
       </div>
 
