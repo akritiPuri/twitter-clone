@@ -23,7 +23,7 @@ const MovieDetails = () => {
   }, [id]);
 
   return (
-    <div className="container mx-auto mt-8 p-4 grid grid-cols-2 gap-5 bg-amber-100">
+    <div className="container mx-auto mt-8 p-4 grid grid-cols-2 gap-5 bg-amber-100 h-screen w-full">
       <div>
         <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
 
@@ -73,7 +73,7 @@ const MovieDetails = () => {
         <img  
           src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
           alt={data.title}
-          className="w-auto h- w-80 h-80 shadow-2xl rounded-xl "
+          className="w-auto  w-80 h-80 shadow-2xl rounded-xl "
         />
       </div>
 
