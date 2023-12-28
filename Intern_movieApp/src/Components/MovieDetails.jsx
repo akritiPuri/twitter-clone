@@ -56,7 +56,10 @@ const MovieDetails = () => {
           <label className="text font-bold">Completed</label>
         </div>
 
-        <div className="text-orange-600 mb-4"><span className="text font-bold text-amber-950">Status: </span>{status}</div>
+        <div className="text-orange-600 mb-4">
+          <span className="text font-bold text-amber-950">Status: </span>
+          {status}
+        </div>
 
         <div className="mb-4">
           <span className="text font-bold">Original Language:</span>{" "}
@@ -69,8 +72,8 @@ const MovieDetails = () => {
         </div>
       </div>
 
-      <div >
-        <img  
+      <div>
+        <img
           src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
           alt={data.title}
           className="w-auto  w-80 h-80 shadow-2xl rounded-xl "
@@ -78,11 +81,24 @@ const MovieDetails = () => {
       </div>
 
       <div>
-        <div><span className="text font-bold">Overview:</span> {data.overview}</div>
-        <div><span className="text font-bold">Popularity:</span> {data.popularity}</div>
-        <div><span className="text font-bold">Release Date:</span> {data.release_date}</div>
-        <div><span className="text font-bold">Vote Average:</span> {data.vote_average}</div>
-        <div><span className="text font-bold">Vote Count: </span>{data.vote_count}</div>
+        <div>
+          <span className="text font-bold">Overview:</span> {data.overview}
+        </div>
+        <div>
+          <span className="text font-bold">Popularity:</span> {data.popularity}
+        </div>
+        <div>
+          <span className="text font-bold">Release Date:</span>{" "}
+          {data.release_date}
+        </div>
+        <div>
+          <span className="text font-bold">Vote Average:</span>{" "}
+          {data.vote_average}
+        </div>
+        <div>
+          <span className="text font-bold">Vote Count: </span>
+          {data.vote_count}
+        </div>
       </div>
     </div>
   );
